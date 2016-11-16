@@ -1,0 +1,23 @@
+{{> navbar}}
+
+{{#each cars}}
+	
+	{{! THIS IS A TEXT COMMENT }}
+	{{!-- THIS IS A COMMENT WITH THE VARIABLE 'MAKE' ~> {{make}} --}}
+	
+	<section id="card--{{@index}}" class="card-wrapper" style="border: 2px solid {{color}}">
+
+		<h3>Car #{{increment @index}}</h3>
+		<h4>{{year}} {{make}} {{model}}</h4>
+		<div class="car-price">${{price}}</div>
+		<div class="card-img" style="background-image: url('images/{{image}}')"></div>
+
+		{{#if purchased}}
+			<span class="car-sold">SOLD!!</span>
+		{{/if}}
+
+		<p class="car-copy">{{description}}</p>
+
+	</section>
+
+{{/each}}

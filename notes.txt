@@ -1,0 +1,1 @@
+npm install handlbars hbsfy --save-dev
