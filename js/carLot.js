@@ -21,8 +21,8 @@ carLot.loadInventory = function () {
 
     inventoryLoader.addEventListener("load", function () {
       var data = JSON.parse(this.responseText);
-      fillInventory(data);
-      resolve(inventory); // No longer responsible for calling populatePage function
+      //fillInventory(data); <-- kill it. send the raw data.
+      resolve(data); // No longer responsible for calling populatePage function
     });
   });
 };
